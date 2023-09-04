@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Minotauro</title>
+    <link rel="stylesheet" href="style.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body class="bg-sky-100 flex flex-col">
+    <section class="fixed top-0 right-[-360px] bg-sky-700 h-screen w-[360px] text-white z-50 duration-200 border-l border-white p-5 flex flex-col justify-between" id="carrinho">
+
+      <div class="flex justify-between m-4" id="cabecalho-carrinho">
+        <p>Meu carrinho</p>
+        <button id="fechar-carrinho"><i class="fa-solid fa-circle-xmark"></i></button>
+      </div>
+
+      <section class="h-3/5 overflow-y-auto flex flex-col gap-2" id="produtos-carrinho"> </section>
+      <p class="bg-slate-500 text-slate-50 rounded-md p-3" id="preco-total">Total: $0</p>
+      <button id="finalizar-compra" class="bg-slate-200 p-1 text-black hover:bg-black hover:text-sky-100" >Finalizar compra</button>
+    </section>
+
+    <header class="flex bg-sky-700 px-8 py-4 justify-between sticky top-0 shadow-xl shadow-stone-400 text-xl z-10">
+      <a href="/">
+        <img class="h-16 ml-40" src="assets/logo/logo.svg" alt="logo da Minotauro" />
+      </a>
+      
+
+      <div class="text-white flex gap-4 items-end mx-4">
+        <button id="abrir-carrinho"><i class="fa-solid fa-cart-shopping"></i></button>
+        <a href="/pedidos.html">
+          <button><i class="fa-solid fa-user"></i></button>
+        </a>
+      </div>
+    </header>
+
+    <main class="flex flex-col items-center">
+      <section class="p-2 mt-12 flex gap-5" id="filtros">
+
+        <div>
+          <input name="filtro" id="exibir-todos" type="radio" class="peer hidden" checked>
+          <label class="peer-checked:bg-slate-800 peer-checked:text-slate-100 peer-checked:font-bold p-2 rounded-xl select-none cursor-pointer" for="exibir-todos">Todos</label>
+        </div>
+        <div>
+          <input name="filtro" id="exibir-masculinos" type="radio" class="peer hidden">
+          <label class="peer-checked:bg-slate-800 peer-checked:text-slate-100 peer-checked:font-bold p-2 rounded-xl select-none cursor-pointer" for="exibir-masculinos">Masculinos</label>
+        </div>
+        <div>
+          <input name="filtro" id="exibir-femininos" type="radio" class="peer hidden">
+          <label class="peer-checked:bg-slate-800 peer-checked:text-slate-100 peer-checked:font-bold p-2 rounded-xl select-none cursor-pointer" for="exibir-femininos">Femininos</label> 
+        </div>
+
+      </section>
+
+      <section class="flex flex-wrap p-10 justify-center gap-10" id="container-produto"></section>
+    </main>
+
+    <script type="module" src="main.js"></script>
+  </body>
+</html>

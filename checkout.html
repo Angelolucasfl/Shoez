@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Minotauro</title>
+    <link rel="stylesheet" href="style.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body class="bg-sky-100 flex flex-col h-screen">
+    <header
+      class="flex bg-sky-700 px-8 py-4 justify-between sticky top-0 shadow-xl shadow-stone-400 text-xl z-10"
+    >
+    <a href="/">
+      <img class="h-16 ml-40" src="assets/logo/logo.svg" alt="logo da Minotauro" />
+    </a>
+
+      <div class="text-white flex gap-4 items-end mx-4"></div>
+    </header>
+
+    <form class="flex w-100 p-20 gap-4 grow">
+      <section id="dados-user" class="w-1/3 bg-white rounded-xl py-4">
+        <p class="mb-6 text-center pt-2 font-bold text-md">Seus Dados</p>
+        <div class="flex flex-col px-10 py-3">
+          <label class="font-bold text-sm mb-2" for="nome">Nome</label>
+          <input
+            class="rounded-sm px-2 border-slate-500 border-2 py-1"
+            type="text"
+            id="nome"
+            placeholder="Seu nome aqui..."
+            required
+          />
+        </div>
+
+        <div class="flex flex-col px-10 py-3">
+          <label class="font-bold text-sm mb-2" for="email">Email</label>
+          <input
+            class="rounded-sm px-2 border-slate-500 border-2 py-1"
+            type="email"
+            id="email"
+            placeholder="SeuEmail@gmail.com"
+            required
+          />
+        </div>
+
+        <div class="flex flex-col px-10 py-3">
+          <label class="font-bold text-sm mb-2" for="telefone"
+            >Telefone de Contato</label
+          >
+          <input
+            class="rounded-sm px-2 border-slate-500 border-2 py-1"
+            type="tel"
+            id="telefone"
+            placeholder="(085)96666-6666"
+            required
+          />
+        </div>
+      </section>
+
+      <section id="pagamento-entrega" class="w-1/3 bg-white rounded-xl py-4">
+        <p class="mb-6 text-center pt-2 font-bold text-md">
+          Pagamento e Entrega
+        </p>
+        <div class="flex flex-col px-10 py-3">
+          <label class="font-bold text-sm mb-2" for="numero-cartao"
+            >Número do Cartão</label
+          >
+          <input
+            class="rounded-sm px-2 border-slate-500 border-2 py-1"
+            type="text"
+            id="nome"
+            placeholder="1111 1111 1111 1111"
+            required
+          />
+        </div>
+
+        <div class="flex">
+            <div class="flex flex-col px-10 py-3 w-1/2">
+            <label class="font-bold text-sm mb-2" for="cvv"
+                >CVV</label
+            >
+            <input
+                class="rounded-sm px-2 border-slate-500 border-2 py-1"
+                type="text"
+                id="cvv"
+                placeholder="222"
+                required
+            />
+            </div>
+
+            <div class="flex flex-col px-10 py-3 w-1/2">
+                <label class="font-bold text-sm mb-2" for="data-validade"
+                    >Data de Validade</label
+                >
+                <input
+                    class="rounded-sm px-2 border-slate-500 border-2 py-1"
+                    type="text"
+                    id="data-expiracao"
+                    placeholder="01/24"
+                    required
+                />
+            </div>
+        </div>
+
+        <div class="flex flex-col px-10 py-3">
+            <label class="font-bold text-sm mb-2" for="cep"
+              >CEP</label
+            >
+            <input
+              class="rounded-sm px-2 border-slate-500 border-2 py-1"
+              type="text"
+              id="cep"
+              placeholder="11111-111"
+              required
+            />
+        </div>
+
+        <div class="flex flex-col px-10 py-3">
+            <label class="font-bold text-sm mb-2" for="endereco"
+              >Endereço</label
+            >
+            <input
+              class="rounded-sm px-2 border-slate-500 border-2 py-1"
+              type="text"
+              id="endereco"
+              placeholder="Rua da alegria"
+              required
+            />
+        </div>
+
+        <div class="flex">
+            <div class="flex flex-col px-10 py-3 w-1/2">
+            <label class="font-bold text-sm mb-2" for="numero"
+                >Número</label
+            >
+            <input
+                class="rounded-sm px-2 border-slate-500 border-2 py-1"
+                type="text"
+                id="numero"
+                placeholder="01"
+                required
+            />
+            </div>
+
+            <div class="flex flex-col px-10 py-3 w-1/2">
+                <label class="font-bold text-sm mb-2" for="complemento"
+                    >Complemento/label
+                >
+                <input
+                    class="rounded-sm px-2 border-slate-500 border-2 py-1"
+                    type="text"
+                    id="complemento"
+                    placeholder="011"
+                    required
+                />
+            </div>
+        </div>
+      </section>
+        <section
+        id="produtos-checkout"
+        class="w-1/3 bg-white rounded-xl py-4">
+
+            <section id="container-produto-checkout" class="h-4/5 overflow-y-auto px-5 "></section>
+
+            <section class="flex flex-col px-4 h-1/5 justify-around rounded-lg" id="celula-checkout">
+                <p class="bg-slate-500 text-slate-50 rounded-md p-3" id="preco-total">Total: $0</p>
+                <button id="finalizar-compra" type="submit" class="bg-slate-200 p-1 text-black hover:bg-black hover:text-sky-100">Finalizar compra</button>
+            </section>
+
+        </section>
+    </form>
+
+    <script src="checkout.js" type="module"></script>
+  </body>
+</html>
